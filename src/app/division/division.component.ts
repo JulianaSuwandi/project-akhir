@@ -11,15 +11,15 @@ export class DivisionComponent implements OnInit {
 
   divisions?:Division[];
   currentDivision:Division={};
-  name='';
-  constructor(private divisionService:DivisionService) { }
+  Name='';
+  constructor(private DivisionService:DivisionService) { }
 
   ngOnInit(): void {
     this.retrieveDivision()
   }
 
   retrieveDivision():void{
-    this.divisionService.getAll()
+    this.DivisionService.getAll()
       .subscribe(
         data=>{
           this.divisions=data;
